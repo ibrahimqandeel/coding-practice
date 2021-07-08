@@ -1,5 +1,9 @@
 package coding.util;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class NumbersUtil {
 
 	public static boolean isNumberPrime(double primeNumber) {
@@ -51,5 +55,17 @@ public class NumbersUtil {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+		try {
+			String S = bufferedReader.readLine();
+			int result = Integer.parseInt(S);
+			bufferedReader.close();
+			System.out.println(result);
+		} catch (IOException | NumberFormatException e) {
+			System.out.println("Bad String");
+		}
+
+
 	}
 }
