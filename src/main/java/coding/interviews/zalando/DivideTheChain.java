@@ -1,6 +1,12 @@
 package coding.interviews.zalando;
 
-public class Task2 {
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class DivideTheChain {
     public static int solution(int A[]) {
         if (A.length < 5) {
             return 0;
@@ -29,13 +35,11 @@ public class Task2 {
         return A[firstIndex] + A[secondIndex];
     }
 
-    public static void main(String args[]) {
-        Task2.solution(new int[]{1, 3, 6, 11, 1, 2});//1,4
-//        System.out.println();
-//        Task2.solution(new int[]{1, 3, 6, 10, 12, 2}); //1,3
-//        System.out.println();
-//        Task2.solution(new int[]{10, 3, 8, 4, 1, 2});
-//        System.out.println();
-//        Task2.solution(new int[]{11, 3, 6, 4, 10, 2});
+    @Test
+    public void test() {
+        assertEquals(4, solution(new int[]{1, 3, 6, 11, 1, 2})); //1,4
+        assertEquals(13, solution(new int[]{1, 3, 6, 10, 12, 2})); //1,3
+        assertEquals(4, solution(new int[]{10, 3, 8, 4, 1, 2}));//1,3
+        assertEquals(5, solution(new int[]{11, 3, 2, 4, 2, 2}));//1,4
     }
 }

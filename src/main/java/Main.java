@@ -1,12 +1,5 @@
-import coding.MyClass;
-import com.sun.corba.se.impl.ior.JIDLObjectKeyTemplate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class Main {
 //    public static void main(String[] args) {
